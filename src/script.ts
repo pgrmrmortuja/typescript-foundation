@@ -54,3 +54,12 @@ greets("Md");
 function hello():void {
     console.log("void");
 }
+
+//8
+//Function with Rest Parameters (Funnel)
+function sum(...numbers: number[]): number{
+    return numbers.reduce((total, num) => total + num , 0 )
+}
+
+sum(1,2,3,4,5);
+
