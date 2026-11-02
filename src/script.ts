@@ -78,3 +78,21 @@ const user: {name: string; age: number} = {
     age: 100
 }
 
+//11
+//Types Alias: Reusable Types : Custom
+type UserType = {
+    name: string;
+    age: number;
+    isActive: boolean;
+    action: () => void;
+    badges: string[];
+}
+
+const user2: UserType = {
+    name: "Md",
+    age: 100,
+    isActive: true,
+    action: () => {console.log("Okay")},
+    badges: ['a', 'b', 'c']
+}
+
