@@ -25,3 +25,8 @@ flags.push(true);
 //Tuples
 // let dhakaLatLong: number[] = [23.8103, 90.4125]; //Normal
 let dhakaLatLong: [number,number] = [23.8103, 90.4125]; //this is tuples
+
+//4
+//Readonly Modifier
+let readonlyLatLong: readonly[number,number] = [23.8103, 90.4125];
+
