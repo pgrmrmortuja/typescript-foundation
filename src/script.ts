@@ -40,3 +40,10 @@ function concatName(firstName: string , lastName?: string): string {
     return `${firstName} ${lastName}`;
 }
 concatName("Md");
+
+//6
+//Function with Default Parameters
+function greets(name: string, greetings: string = "Salam"){
+    return `${greetings} ${name}`;
+}
+greets("Md");
