@@ -47,3 +47,10 @@ function greets(name: string, greetings: string = "Salam"){
     return `${greetings} ${name}`;
 }
 greets("Md");
+
+//7
+//Function with Void Parameters
+//No return
+function hello():void {
+    console.log("void");
+}
