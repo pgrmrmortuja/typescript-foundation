@@ -1,10 +1,10 @@
 //  
-let myString: string = "Programming"; 
-let myNumber: number = 10; 
+let myString: string = "Programming";
+let myNumber: number = 10;
 let myBoolean: boolean = true;
 let mySymbol: symbol = Symbol("id"); let myBigInt: bigint = 100n;
 
-let add = (a:number , b:number):number => {
+let add = (a: number, b: number): number => {
     return a + b;
 }
 
@@ -15,7 +15,7 @@ let randomArray = ['Hello', 10, true];
 
 //Array for Typescript
 let stringArray: string[] = ['Hello', 'Hi'];
-let numberArray: number[] = [1,2,3];
+let numberArray: number[] = [1, 2, 3];
 let flags: boolean[] = [];
 
 flags.push(true);
@@ -24,16 +24,16 @@ flags.push(true);
 //3
 //Tuples
 // let dhakaLatLong: number[] = [23.8103, 90.4125]; //Normal
-let dhakaLatLong: [number,number] = [23.8103, 90.4125]; //this is tuples
+let dhakaLatLong: [number, number] = [23.8103, 90.4125]; //this is tuples
 
 //4
 //Readonly Modifier
-let readonlyLatLong: readonly[number,number] = [23.8103, 90.4125];
+let readonlyLatLong: readonly [number, number] = [23.8103, 90.4125];
 
 //5
 //Function Optional Parameters
-function concatName(firstName: string , lastName?: string): string {
-    if(!lastName){
+function concatName(firstName: string, lastName?: string): string {
+    if (!lastName) {
         return firstName;
     }
 
@@ -43,7 +43,7 @@ concatName("Md");
 
 //6
 //Function with Default Parameters
-function greets(name: string, greetings: string = "Salam"){
+function greets(name: string, greetings: string = "Salam") {
     return `${greetings} ${name}`;
 }
 greets("Md");
@@ -51,29 +51,29 @@ greets("Md");
 //7
 //Function with Void Parameters
 //No return
-function hello():void {
+function hello(): void {
     console.log("void");
 }
 
 //8
 //Function with Rest Parameters (Funnel)
-function sum(...numbers: number[]): number{
-    return numbers.reduce((total, num) => total + num , 0 )
+function sum(...numbers: number[]): number {
+    return numbers.reduce((total, num) => total + num, 0)
 }
 
-sum(1,2,3,4,5);
+sum(1, 2, 3, 4, 5);
 
 //9
 //Funnel with Tuple Rest with Destructuring, Tuple
-function logUserAction(...args: [name: string, age: number, isActive: boolean]){
-    const [name, age, isActive] = args ;
+function logUserAction(...args: [name: string, age: number, isActive: boolean]) {
+    const [name, age, isActive] = args;
     console.log(`${name} is ${age}`);
 }
 logUserAction('Md', 100, true);
 
 //10
 // Declare Object Types
-const user: {name: string; age: number} = {
+const user: { name: string; age: number } = {
     name: "Md",
     age: 100
 }
@@ -92,7 +92,24 @@ const user2: UserType = {
     name: "Md",
     age: 100,
     isActive: true,
-    action: () => {console.log("Okay")},
+    action: () => { console.log("Okay") },
     badges: ['a', 'b', 'c']
 }
 
+//12
+//Interface: Reusable : Custom
+interface UserType3 {
+    name: string;
+    age: number;
+    isActive: boolean;
+    action: () => void;
+    badges: string[];
+}
+
+const user3: UserType3 = {
+    name: "Md",
+    age: 100,
+    isActive: true,
+    action: () => { console.log("Okay") },
+    badges: ['a', 'b', 'c']
+}
