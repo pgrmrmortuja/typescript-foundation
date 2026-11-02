@@ -63,3 +63,11 @@ function sum(...numbers: number[]): number{
 
 sum(1,2,3,4,5);
 
+//9
+//Funnel with Tuple Rest with Destructuring, Tuple
+function logUserAction(...args: [name: string, age: number, isActive: boolean]){
+    const [name, age, isActive] = args ;
+    console.log(`${name} is ${age}`);
+}
+logUserAction('Md', 100, true);
+
