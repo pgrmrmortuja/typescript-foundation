@@ -71,3 +71,10 @@ function logUserAction(...args: [name: string, age: number, isActive: boolean]){
 }
 logUserAction('Md', 100, true);
 
+//10
+// Declare Object Types
+const user: {name: string; age: number} = {
+    name: "Md",
+    age: 100
+}
+
