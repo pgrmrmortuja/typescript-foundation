@@ -30,3 +30,13 @@ let dhakaLatLong: [number,number] = [23.8103, 90.4125]; //this is tuples
 //Readonly Modifier
 let readonlyLatLong: readonly[number,number] = [23.8103, 90.4125];
 
+//5
+//Function Optional Parameters
+function concatName(firstName: string , lastName?: string): string {
+    if(!lastName){
+        return firstName;
+    }
+
+    return `${firstName} ${lastName}`;
+}
+concatName("Md");
